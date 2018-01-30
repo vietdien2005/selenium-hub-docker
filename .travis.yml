@@ -1,0 +1,12 @@
+sudo: required
+language: python
+dist: trusty
+services:
+- docker
+before_script:
+- pip install selenium
+script:
+- docker-compose up -d
+- sleep 10
+- docker ps
+- chmod ugo+x tests/test_selenium.py.sh && bash tests/test_selenium.py.sh
