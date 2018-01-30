@@ -21,7 +21,7 @@ Install packages with pip:
 
 Command Run:
 ```
-    chmod ugo+x tests/test_selenium.py.sh && bash tests/test_selenium.py.sh
+    python tests/test_selenium.py
 ```
 
 ## Donate
