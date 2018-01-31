@@ -9,6 +9,7 @@ services:
 
     selenium-node-firefox:
         container_name: selenium-node-firefox
+        restart: unless-stopped
         image: selenium/node-firefox:latest
         environment:
             HUB_PORT_4444_TCP_ADDR: selenium-hub
@@ -18,6 +19,7 @@ services:
 
     selenium-node-chrome:
         container_name: selenium-node-chrome
+        restart: unless-stopped
         image: selenium/node-chrome:latest
         volumes:
             - /dev/shm:/dev/shm
@@ -26,15 +28,3 @@ services:
             HUB_PORT_4444_TCP_PORT: 4444
         depends_on:
             - selenium-hub
-
-    selenium-node-phantomjs:
-        container_name: selenium-node-phantomjs
-        image: selenium/node-phantomjs:latest
-        volumes:
-            - /dev/shm:/dev/shm
-        environment:
-            HUB_PORT_4444_TCP_ADDR: selenium-hub
-            HUB_PORT_4444_TCP_PORT: 4444
-        depends_on:
-            - selenium-hub
-

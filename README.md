@@ -2,7 +2,7 @@
 
 # Selenium Hub Docker
 
-- Docker Compose of Selenium Hub with Node Chrome, Firefox, PhantomJS
+- Docker Compose of Selenium Hub with Node Chrome, Firefox
 
 ## Running
 
